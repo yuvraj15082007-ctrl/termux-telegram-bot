@@ -12,7 +12,51 @@ CHAT_ID="PASTE_YOUR_CHAT_ID_HERE"
 
 
 ---
+## 📦 Installation (One-Command Setup)
 
+Termux bot install karna bahut easy hai.  
+Sirf yeh command run karo:
+
+```bash
+curl -L -o install.sh https://raw.githubusercontent.com/yuvraj15082007-ctrl/termux-telegram-bot/main/install.sh && bash install.sh
+```
+
+---
+
+## ⚙️ Initial Setup
+
+Install hone ke baad:
+
+1. `~/termux-telegram-bot/bot.sh` file open karo  
+2. Yeh do lines update karo:
+
+```bash
+BOT_TOKEN="YOUR_TELEGRAM_BOT_TOKEN"
+CHAT_ID="YOUR_TELEGRAM_CHAT_ID"
+```
+
+---
+
+## ▶️ Start Bot
+
+```bash
+cd ~/termux-telegram-bot
+./bot.sh
+```
+
+---
+
+## 🆔 How to Get BOT TOKEN & CHAT ID?
+
+### 1️⃣ BOT TOKEN
+- Telegram par **@BotFather** open karo
+- `/newbot` → name → username
+- BotFather tumhe token dega → Copy karo
+
+### 2️⃣ CHAT ID
+- Telegram par @myidbot open karo
+- `/getid` send karo  
+- Jo number mile wo tumhara chat ID hai
 🚀 Features
 
 🎥 Media & Camera
