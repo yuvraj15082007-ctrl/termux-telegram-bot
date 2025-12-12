@@ -1,2 +1,221 @@
-# termux-telegram-bot
-Ultimate Termux Telegram Bot with camera, mic, autoplay, zip photos, volume control etc.
+Termux Telegram Bot (Android 12–15 Supported)
+
+A powerful remote-control bot for Android using Termux + Telegram.
+Control your phone from anywhere — camera, mic, files, audio play, WiFi scan, apps, location, everything.
+
+⚠️ SECURITY WARNING
+Never upload your real Telegram BOT TOKEN or CHAT ID on GitHub.
+Use placeholders like:
+
+BOT_TOKEN="PASTE_YOUR_BOT_TOKEN_HERE"
+CHAT_ID="PASTE_YOUR_CHAT_ID_HERE"
+
+
+---
+
+🚀 Features
+
+🎥 Media & Camera
+
+• /photo back – Take photo from back camera
+• /photo front – Take photo from front camera
+• /lastphoto – Send last clicked photo
+• /lastvideo – Send last recorded video
+• /audio – Record 30s microphone audio
+• /screen 10 – Screen record for 10 seconds
+
+
+---
+
+📂 Files & Storage
+
+• /ls [path] – List files
+• /sendfile [path] – Download a file
+• /zipphotos [N] – Zip last N camera photos
+• /storage – Internal + External storage info
+
+
+---
+
+📡 Network
+
+• /ip – Public + Local IP
+• /speed – Internet speedtest
+• /ping [host] – Ping test
+• /wifiscan – Scan nearby WiFi networks
+
+
+---
+
+📱 System Info
+
+• /status – Battery percentage
+• /heat – Battery temperature
+• /info – Model + Android version + Uptime
+• /apps – List installed apps
+• /clip – Read clipboard text
+
+
+---
+
+🔧 Controls
+
+• /speak [text] – TTS Speak
+• /torch on/off – Flashlight
+• /vibrate [ms] – Vibration
+• /ring [sec] – Ring phone
+• /vol max/mute/0–15 – Volume control
+• /play [song] – Play audio file
+• /autoplay [folder] – Auto-continue playing songs
+• /stopautoplay – Stop autoplay
+• /stop – Stop media player
+
+
+---
+
+⚙️ Bot Control
+
+• /restart – Restart bot safely
+• /help – Show command list
+
+
+---
+
+🛠️ Requirements (Install in Termux)
+
+pkg install termux-api jq ffmpeg zip curl python
+pip install speedtest-cli
+termux-setup-storage
+
+Give required permissions: • Camera
+• Microphone
+• Storage
+• Location
+
+
+---
+
+🤖 Telegram Bot Setup
+
+1️⃣ Create Bot Token
+
+1. Open Telegram → search "@BotFather"
+
+
+2. Send: /newbot
+
+
+3. Give bot name + user name
+
+
+4. BotFather will give BOT TOKEN
+
+
+
+Paste the token in bot.sh:
+
+BOT_TOKEN="PASTE_YOUR_BOT_TOKEN_HERE"
+
+
+---
+
+2️⃣ Get Chat ID
+
+1. Send /start to your bot
+
+
+2. Open in browser:
+
+
+
+https://api.telegram.org/botYOUR_TOKEN/getUpdates
+
+3. Look for:
+
+
+
+"chat": { "id": 123456789 }
+
+Use that number:
+
+CHAT_ID="PASTE_YOUR_CHAT_ID_HERE"
+
+
+---
+
+▶️ How to Run Bot
+
+chmod +x bot.sh
+./bot.sh
+
+Your bot will go online on Telegram immediately.
+
+
+---
+
+📘 Full Command List
+
+📍 Location
+/loc
+
+📸 Camera
+/photo back
+/photo front
+/lastphoto
+/lastvideo
+
+🎙 Audio
+/audio
+/screen [seconds]
+
+📂 Files
+/ls [path]
+/sendfile [path]
+/zipphotos [N]
+/storage
+
+🌐 Network
+/ip
+/ping [host]
+/speed
+/wifiscan
+
+📱 System Info
+/status
+/heat
+/info
+/apps
+/clip
+
+🔧 Controls
+/speak [text]
+/torch on/off
+/vibrate [ms]
+/ring [sec]
+/vol max/mute/0-15
+/play [file]
+/autoplay [folder]
+/stopautoplay
+/stop
+
+♻️ Bot
+/restart
+/help
+
+
+---
+
+👨‍💻 Developer
+
+Made with ❤️ by Yuvraj (mafiya)
+Termux Advanced Automation Project
+
+
+---
+
+📜 License
+
+MIT License — free to use & modify.
+
+
+---
