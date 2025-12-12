@@ -1,0 +1,34 @@
+#!/data/data/com.termux/files/usr/bin/bash
+# Termux Telegram Bot Installer Script
+# Author: Yuvraj
+
+echo -e "\n📦 Installing required packages...\n"
+
+pkg update -y
+pkg upgrade -y
+pkg install -y termux-api jq ffmpeg zip curl python git
+
+echo -e "\n🐍 Installing Python speedtest...\n"
+pip install speedtest-cli
+
+echo -e "\n📁 Setting up storage permissions...\n"
+termux-setup-storage
+
+echo -e "\n📂 Creating bot folder at ~/termux-telegram-bot ...\n"
+mkdir -p ~/termux-telegram-bot
+cd ~/termux-telegram-bot || exit
+
+echo -e "\n⬇️ Downloading latest bot.sh from GitHub...\n"
+curl -L -o bot.sh "https://raw.githubusercontent.com/yuvraj15082007-ctrl/termux-telegram-bot/main/bot.sh"
+
+chmod +x bot.sh
+
+echo -e "\n✅ Installation Done!"
+echo "--------------------------------------"
+echo "⚙️  Configure your bot:"
+echo "1️⃣  Edit bot.sh and add:"
+echo "   BOT_TOKEN=\"YOUR_BOT_TOKEN\""
+echo "   CHAT_ID=\"YOUR_CHAT_ID\""
+echo "--------------------------------------"
+echo "▶️ Start bot: ./bot.sh"
+echo "--------------------------------------"
